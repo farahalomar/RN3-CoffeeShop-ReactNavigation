@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 // NativeBase Components
 import {
   Text,
@@ -15,7 +16,7 @@ import {
   Header
 } from "native-base";
 
-const Login = () => {
+const Login = props => {
   return (
     <Content>
       <Header transparent />
@@ -49,7 +50,8 @@ const Login = () => {
             </Form>
           </Body>
         </ListItem>
-        <Button full success>
+        <Button onPress={() => props.navigation.replace("CoffeeList")} 
+        full success>
           <Text>Login</Text>
         </Button>
         <Button full warning>

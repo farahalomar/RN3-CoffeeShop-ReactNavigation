@@ -7,10 +7,13 @@ import { ListItem, Card, CardItem, Thumbnail, Text, Left } from "native-base";
 // Style
 import styles from "./styles";
 
-const CoffeeItem = ({ cafe }) => {
+const CoffeeItem = props => {
+const ({ cafe }) = props; 
+const {{Navigation}} =props
   const handlePress = () => {
     alert("Pressed");
   };
+};
   return (
     <ImageBackground
       source={{ uri: cafe.background }}
@@ -38,4 +41,4 @@ const CoffeeItem = ({ cafe }) => {
   );
 };
 
-export default CoffeeItem;
+export default withNavigation(CoffeeItem);
