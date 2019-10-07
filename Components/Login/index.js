@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 // NativeBase Components
 import {
   Text,
@@ -50,11 +49,18 @@ const Login = props => {
             </Form>
           </Body>
         </ListItem>
-        <Button onPress={() => props.navigation.replace("CoffeeList")} 
-        full success>
+        <Button
+          full
+          success
+          onPress={() => props.navigation.replace("ListScreen")}
+        >
           <Text>Login</Text>
         </Button>
-        <Button full warning>
+        <Button
+          full
+          warning
+          onPress={() => props.navigation.replace("ListScreen")}
+        >
           <Text>Register</Text>
         </Button>
       </List>
